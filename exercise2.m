@@ -2,7 +2,7 @@
 
 %Files required:
 
-% meshHolesQuad.m:       uncompress this file from meshFilesAll.rar
+% meshTwoHolesQuad.m:    uncompress this file from meshFilesAll.rar
 % plotQuadMesh.m:        uncompress this file from additionalFiles.zip 
 % plotContourSolution.m: uncompress this file from additionalFiles.zip
 % baryCoordQuad.m
