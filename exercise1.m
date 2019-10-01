@@ -1,4 +1,5 @@
-%exercise1.m: computation of barycentric coordinates of a given point p
+%exercise1.m: computation of the barycentric coordinates of a point w.r.t.
+%a given quadrilateral
 
 %Files required:
 % plotRectangle.m: uncompress this file from additionalFiles.zip 
