@@ -34,7 +34,7 @@ hold off
 
 %Intepolate temperature at point p
 temp=1:numNodes; %temperatures at the nodes (just an example).
-temp=temp';
+temp=temp(:);
                 
                       
 %Interpolated temperature at point p                      
@@ -42,7 +42,6 @@ interpTemp=temp(n1)*alphas(1)+...
     temp(n2)*alphas(2)+...
     temp(n3)*alphas(3)+...
     temp(n4)*alphas(4)
-
 
 % Fancy output: don't try this at exams!
 fprintf('Elem: %d\n',e)
@@ -60,7 +59,7 @@ vertexs
 p
 interpTemp
 
-%Color map for the temperatures (optioinal for this practice)
+%Color map for the temperatures (optional for this practice)
 titol='Temperature plot';
 colorScale='jet';
 plotContourSolution(nodes,elem,temp,titol,colorScale)
