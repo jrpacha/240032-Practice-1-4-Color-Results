@@ -1,9 +1,14 @@
 %exercise1.m: computation of barycentric coordinates of a given point p
 
 %Files required:
+% plotRectangle.m: uncompress this file from additionalFiles.zip 
 % baryCoordQuad.m
 
 %Be sure it is placed in the current folder!
+
+%You can download meshFilesAll.rar and additionalFiles.zip from 
+%Toni Susin's Numerical Factory.
+
 
 clearvars
 close all

@@ -1,8 +1,8 @@
-%exercise2.m: interpolate temperature on a triangle mesh
+%exercise2.m: interpolate temperature on a quadrilateral mesh
 
 %Files required:
 
-% meshHolesQuad.m:    uncompress this file from meshFilesAll.rar
+% meshHolesQuad.m:       uncompress this file from meshFilesAll.rar
 % plotQuadMesh.m:        uncompress this file from additionalFiles.zip 
 % plotContourSolution.m: uncompress this file from additionalFiles.zip
 % baryCoordQuad.m
@@ -77,7 +77,7 @@ p
 interpTemp
 
 % Fancy output with fprintf: don't try this at exams!
-fprintf('Elem: %d\n',e)
+fprintf('Elem.: %d\n',e)
 fprintf('Nodes: %d,%d,%d,%d\n',n1,n2,n3,n4)
 fprintf('%20s\n','Vertexs Coords.')
 fprintf('%7s%11s\n','X','Y')      
