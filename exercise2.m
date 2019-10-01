@@ -2,9 +2,15 @@ clearvars
 close all
 
 p=[39.0,7.0];
-eval('meshTwoHolesQuad');
-numNodes=size(nodes,1);
-numElem=size(elem,1);
+
+eval('meshTwoHolesQuad'); %load nodes position and connectivity matrices
+                          %from the mesh file meshTwoHolesQuad.m 
+                          
+numNodes=size(nodes,1); %number of nodes
+numElem=size(elem,1);   %number of elements
+
+temp=1:numNodes; %temperatures at the nodes. Just an example!
+temp=temp(:);
 
 for e=1:numElem
     n1=elem(e,1);
@@ -22,6 +28,7 @@ for e=1:numElem
     end
 end
 
+%Draw the mesh, and mark the point p and its element's nodes
 figure()
 plotQuadMesh(nodes, elem);
 hold on
@@ -29,35 +36,7 @@ plot(p(1,1),p(1,2),'or','Marker','o','MarkerFaceColor','red',...
     'MarkerSize',5)
 plot(vertexs(:,1),vertexs(:,2),'og','Marker','o','MarkerFaceColor',...
     'green','MarkerSize',4)
-hold off
-
-
-%Intepolate temperature at point p
-temp=1:numNodes; %temperatures at the nodes (just an example).
-temp=temp(:);
-                
-                      
-%Interpolated temperature at point p                      
-interpTemp=temp(n1)*alphas(1)+...
-    temp(n2)*alphas(2)+...
-    temp(n3)*alphas(3)+...
-    temp(n4)*alphas(4)
-
-% Fancy output: don't try this at exams!
-fprintf('Elem: %d\n',e)
-fprintf('Nodes: %d,%d,%d,%d\n',n1,n2,n3,n4)
-fprintf('%19s\n','Vertexs Coords')
-fprintf('%7s%11s\n','X','Y')      %fancy output: don't try this at exams!
-fprintf('%12.5e%12.5e\n',vertexs')%fancy output: don't try this at exams!
-fprintf('\nInterpolated Temp.at point p=(%f,%f):\nT=%12.5e\n',...
-    p,interpTemp);
-% In exams: go straight to the results!
-format short e
-e
-nods=[n1,n2,n3,n4]
-vertexs
-p
-interpTemp
+hold off 
 
 %Color map for the temperatures (optional for this practice)
 titol='Temperature plot';
@@ -69,3 +48,25 @@ plot(p(1,1),p(1,2),'ok','Marker','o','MarkerFaceColor','black',...
 plot(vertexs(:,1),vertexs(:,2),'ok','Marker','o','MarkerFaceColor',...
     'black','MarkerSize',4)
 hold off
+                      
+%Interpolate temperature at point p                      
+interpTemp=temp(n1)*alphas(1)+...
+    temp(n2)*alphas(2)+...
+    temp(n3)*alphas(3)+...
+    temp(n4)*alphas(4);
+
+format short e
+e
+nods=[n1,n2,n3,n4]
+vertexs
+p
+interpTemp
+
+% Fancy output with fprintf: don't try this at exams!
+fprintf('Elem: %d\n',e)
+fprintf('Nodes: %d,%d,%d,%d\n',n1,n2,n3,n4)
+fprintf('%20s\n','Vertexs Coords.')
+fprintf('%7s%11s\n','X','Y')      
+fprintf('%12.5e%12.5e\n',vertexs')
+fprintf('\nInterpolated Temp.at point p=(%f,%f):\nT=%12.5e\n',...
+    p,interpTemp);
