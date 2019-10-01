@@ -33,7 +33,8 @@ hold off
 
 
 %Intepolate temperature at point p
-temp=1:numNodes;%temperatures at the nodes (just an example).
+temp=1:numNodes; %temperatures at the nodes (just an example).
+temp=temp';
                 
                       
 %Interpolated temperature at point p                      
@@ -42,12 +43,22 @@ interpTemp=temp(n1)*alphas(1)+...
     temp(n3)*alphas(3)+...
     temp(n4)*alphas(4)
 
+
+% Fancy output: don't try this at exams!
 fprintf('Elem: %d\n',e)
 fprintf('Nodes: %d,%d,%d,%d\n',n1,n2,n3,n4)
+fprintf('%19s\n','Vertexs Coords')
 fprintf('%7s%11s\n','X','Y')      %fancy output: don't try this at exams!
 fprintf('%12.5e%12.5e\n',vertexs')%fancy output: don't try this at exams!
-fprintf('\nInterpolated Temp.at point p=(%f,%f),\nT=%12.5e\n',...
+fprintf('\nInterpolated Temp.at point p=(%f,%f):\nT=%12.5e\n',...
     p,interpTemp);
+% In exams: go straight to the results!
+format short e
+e
+nods=[n1,n2,n3,n4]
+vertexs
+p
+interpTemp
 
 %Color map for the temperatures (optioinal for this practice)
 titol='Temperature plot';
