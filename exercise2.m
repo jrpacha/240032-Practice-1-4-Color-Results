@@ -1,8 +1,8 @@
-%exercise2.m: interpolate temperature in a triangle mesh
+%exercise2.m: interpolate temperature on a triangle mesh
 
-%Extra files required:
+%Files required:
 
-% meshTwoHolesQuad.m:    uncompress this file from meshFilesAll.rar
+% meshHolesQuad.m:    uncompress this file from meshFilesAll.rar
 % plotQuadMesh.m:        uncompress this file from additionalFiles.zip 
 % plotContourSolution.m: uncompress this file from additionalFiles.zip
 % baryCoordQuad.m
