@@ -1,34 +1,26 @@
-%exercise1.m: computation of the barycentric coordinates of a point w.r.t.
-%a given quadrilateral
-
-%Files required:
-% plotRectangle.m: uncompress this file from additionalFiles.zip 
-% baryCoordQuad.m
-
-%Be sure it is placed in the current folder!
-
-%You can download meshFilesAll.rar and additionalFiles.zip from 
-%Toni Susin's Numerical Factory.
-
+%% exercise1
+%Same as in colorMapEx.m 1st. example, but changing color map from jet 
+% to gray.
 
 clearvars
 close all
 
-v1=[0,0];
-v2=[5,-1];
-v3=[4,5];
-v4=[1,4];
-vertexs=[v1;v2;v3;v4];
+% Consider only one element. A triangle defined by its nodes and we assing 
+% a temperature to each node
 
-p=[3,2];
+nodes=[1,1;  %define the nodes of a triangle
+       3,2;
+       2,4];
 
-plotRectangle(v1, v2, v3, v4);
-hold on
-plot(p(1,1),p(1,2),'o','Marker','o','MarkerfaceColor','red')
+elem=[1,2,3]; % The triangle is thought of as one only element.
+
+values=[0;128;255]; %can be temperature, stress, etc.
+X=nodes(:,1);
+Y=nodes(:,2);
+fill(X,Y,values);
+colormap('gray') %one of the standar color maps for FEM
+colorbar %it is optional, shows the bar with the color scale
+hold on;
+p=[2,3]; %consider a point
+plot(p(1,1),p(1,2),'ko'); %plot the point using a black o
 hold off
-
-[alphas,isInside]=baryCoordQuad(vertexs,p);
-
-fprintf('alphas = [%.4e, %.4e, %.4e, %.4e]\n',alphas)
-fprintf('isInside = %d\n',isInside)
-
