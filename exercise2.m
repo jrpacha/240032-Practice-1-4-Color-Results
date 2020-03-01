@@ -9,7 +9,7 @@ eval('meshTwoHolesQuad');
 numNodes=size(nodes,1);
 numElem=size(elem,1);
 
-temp=1:numNodes;
+temp=1:numNodes; %jaust as an example
 
 colorMap='jet'
 title='Temperature Plot'

@@ -20,7 +20,7 @@ colormap('jet') %one of the standar color maps for FEM
 colorbar %it is optional, shows the bar with the color scale
 hold on;
 p=[2,3]; %consider a point
-plot(p(1,1),p(1,2),'ko'); %plot the point using a black o
+plot(p(1,1),p(1,2),'ko'); %plot the point using a black 'o'
 hold off;
 
 
@@ -39,4 +39,4 @@ colorMap='jet'
 title='Temperature Plot'
 
 plotContourSolution(nodes,elem,temp,title,colorMap); %Can plot both triang.
-                                                     %snd quad. meshes!
+                                                     %and quad. meshes!
