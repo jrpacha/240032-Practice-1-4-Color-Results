@@ -1,11 +1,11 @@
-# matlabSession-240032_08-10-2019
-## P1.4 - Color Results. Find the Nodes & Elements on the Edges
+# Practice 1.4. Color Results
+## P1.4-Color Results. Find the Nodes & Elements on the Edges
 ### Matlab session Tuesday 08-10-2019
 
 You can find the session's guide ---together with other extra material
 files---at Toni Susin's 'Numerical Factory', 
 
-https://numfactory.upc.edu/web/FiniteElements.html
+https://numfactory.upc.edu/numfactory/subjects/?subject=FEM&version=etseib&lang=en&section=1&subsection=P
 
 Disclaimer: this stuff is provided 'as is'. Please, chek it (just in case
 you find it useful), but **it's worth you try to write all the programs 
