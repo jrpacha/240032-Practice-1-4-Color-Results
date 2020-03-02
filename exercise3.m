@@ -1,12 +1,17 @@
 clearvars
 close all
 
-%Exercise3: Selection of a set of points: Boundaries
+%%Exercise3: Selection of a set of points: Boundaries
 
 eval('meshHole');
 numNodes=size(nodes,1);
 numelem=size(elem,1);
 
+figure();
+plotElements(nodes,elem,0);
+%%
+
+figure();
 temp=1:numNodes;
 colorMap='jet';
 title='Temperature Plot';
