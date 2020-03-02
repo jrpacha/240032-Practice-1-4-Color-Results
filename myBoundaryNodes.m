@@ -9,6 +9,7 @@ function [indNodBd, indElemBd, indLocalEdgBd, edges] = myBoundaryNodes(nodes, el
 [numElem,nd] = size(elem);
 indElemBd = [];
 indLocalEdgBd = [];
+indNodBd = [];
 edges = [];
 Ones = ones(numElem,nd);
 localEdgs = [2:nd;1:nd-1];
@@ -23,11 +24,12 @@ for e = 1:numElem
         if length(find(c == 2)) == 1
            indElemBd = [indElemBd,e];
            indLocalEdgBd = [indLocalEdgBd,j];
-           edges = [edges;elem(e,localEdgs(j,1)),elem(e,localEdgs(j,2))];
+           indNodBd = [indNodBd,...
+               elem(e,localEdgs(j,1)),elem(e,localEdgs(j,2))];
         end
+        edges = [edges;elem(e,localEdgs(j,1)),elem(e,localEdgs(j,2))];
     end
 end
-indElemBd=unique(indElemBd,'sort');
-indNodBd = unique([edges(:,1)',edges(:,2)'],'sort');
+indNodBd = unique(indNodBd,'sort');
 end
 

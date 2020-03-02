@@ -35,7 +35,9 @@ fprintf('# nodes circle: %d\n',length(indNodCirc))
 fprintf('# nodes circle: %d\n',length(indNodCirc))  
 
 fprintf('# nodes on the boundary %d\n',length(indNodBoundary))  
-fprintf('list of nodes on the edges %4d\n', indNodBoundary)
+fprintf('list of nodes on the edges:')
+fprintf('%4d', indNodBoundary')
+fprintf('\n')
 
 % plot(nodes(indNodLeft,1),nodes(indNodLeft,2),'o','Marker','o',...
 %     'MarkerFaceColor','red')
