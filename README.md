@@ -1,6 +1,5 @@
 # Practice 1.4. Color Results
 ## P1.4-Color Results. Find the Nodes & Elements on the Edges
-### Matlab session Tuesday 08-10-2019
 
 **Note:** the m-function file <tt>myBoundaryNodes.m</tt> and the script 
 <tt>myExercise4.m</tt> are only for testing purposes. **Do not use it!**
