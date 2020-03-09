@@ -12,7 +12,7 @@ indLocalEdgBd = [];
 indNodBd = [];
 edges = [];
 Ones = ones(numElem,nd);
-localEdgs = [2:nd;1:nd-1];
+localEdgs = [1:nd-1;2:nd];
 localEdgs = [localEdgs';nd,1];
 
 for e = 1:numElem    
@@ -21,8 +21,8 @@ for e = 1:numElem
         B = elem(e,localEdgs(j,2))*Ones;
         L = (elem == A) | (elem == B);
         c = sum(L');
-        if length(find(c == 2)) == 1
-           indElemBd = [indElemBd,e];
+        if length(find(c == 2)) == 1 
+           indElemBd = [indElemBd;e];
            indLocalEdgBd = [indLocalEdgBd,j];
            indNodBd = [indNodBd,...
                elem(e,localEdgs(j,1)),elem(e,localEdgs(j,2))];
