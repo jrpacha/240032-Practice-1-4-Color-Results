@@ -53,8 +53,3 @@ plot(nodes(newNodesBd,1), nodes(newNodesBd,2), 'o', 'markerFaceColor', 'green')
 hold off
 
 
-
-
-
-
-
