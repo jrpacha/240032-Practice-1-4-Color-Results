@@ -7,14 +7,11 @@ eval('meshHole');
 numNodes=size(nodes,1);
 numelem=size(elem,1);
 
-figure();
-plotElements(nodes,elem,0);
-%%
+plotElementsOld(nodes,elem,0);
 
-figure();
 temp=1:numNodes;
-colorMap='jet';
-title='Temperature Plot';
+colorMap = 'jet';
+title = 'Temperature Plot';
 plotContourSolution(nodes,elem,temp,title,colorMap)
 hold on
 
@@ -22,11 +19,11 @@ hold on
 %hold on
 
 %Indexs of the ones on each edge and on the half-circle
-indNodLeft=find(nodes(:,1) < 0.01);
-indNodRight=find(nodes(:,1) > 0.99);
-indNodTop=find(nodes(:,2) > 0.99);
-indNodBottom=find(nodes(:,2) < -0.99);
-indNodCirc=find(sqrt(nodes(:,1).^2 + nodes(:,2).^2) < 0.41);
+[indNodLeft,indCol] = find(nodes(:,1) < 0.01);
+[indNodRight,indCol] = find(nodes(:,1) > 0.99);
+[indNodTop,indCol] = find(nodes(:,2) > 0.99);
+[indNodBottom,indCol] = find(nodes(:,2) < -0.99);
+[indNodCirc,indCol] = find(sqrt(nodes(:,1).^2 + nodes(:,2).^2) < 0.41);
 
 indNodBoundary = unique([indNodLeft',indNodRight',indNodTop',...
     indNodBottom',indNodCirc']);

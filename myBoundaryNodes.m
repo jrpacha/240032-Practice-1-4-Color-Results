@@ -1,3 +1,6 @@
+%%%
+%%% Only for testing purposes DO NOT USE THIS!
+%%%
 function [indNodBd, indElemBd, indLocalEdgBd, edges] = myBoundaryNodes(nodes, elem)
 % output:
 % indNodBd  -->  list of all nodes on the boundary
