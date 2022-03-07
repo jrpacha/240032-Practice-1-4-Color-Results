@@ -2,7 +2,7 @@ clearvars
 close all
 
 %%Exercise3: Selection of a set of points: Boundaries
-
+% Exercise 3
 eval('meshHole');
 numNodes=size(nodes,1);
 numelem=size(elem,1);
