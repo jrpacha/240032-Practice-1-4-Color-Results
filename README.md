@@ -5,7 +5,7 @@
 <tt>myExercise4.m</tt> are only for testing purposes. **Do not use it!**
 
 You can find the session's guide ---together with other extra material
-files---at Toni Susin's 'Numerical Factory', 
+files---at professor Toni Susin's 'Numerical Factory', 
 
 https://numfactory.upc.edu/numfactory/subjects/?subject=FEM&version=etseib&lang=en&section=1&subsection=P
 
