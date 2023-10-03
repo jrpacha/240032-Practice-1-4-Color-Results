@@ -11,10 +11,11 @@ close all
 eval('meshTwoHolesQuad');
 
 t = cputime;
-[indNodBd1, indElemBd1, indLocalEdgBd1, edges1] = boundaryNodes(nodes, elem);
-t = cputime - t
-t = cputime;
 [indNodBd, indElemBd, indLocalEdgBd, edges] = myBoundaryNodes(nodes, elem);
+t = cputime - t
+
+t = cputime;
+[indNodBd1, indElemBd1, indLocalEdgBd1, edges1] = boundaryNodes(nodes, elem);
 t = cputime - t
 
 fprintf(' number of nodes in the boundary of meshTwoholesQuad.m = %d \n',...
